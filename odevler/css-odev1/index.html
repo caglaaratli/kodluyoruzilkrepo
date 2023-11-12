@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Sitem</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Web Sitem</h1>
+    </header>
+
+    <nav>
+        <a href="#home">Ana Sayfa</a>
+        <a href="#about">Hakkında</a>
+    </nav>
+
+    <section id="home">
+        <h2>Hoş Geldiniz!</h2>
+        <p>Web sitemize hoş geldiniz. Burada bulunan içeriklere göz atabilirsiniz.</p>
+        <ul style="list-style-position: inside;">
+            <li>İçerik 1</li>
+            <li>İçerik 2</li>
+            <li>İçerik 3</li>
+        </ul>
+    </section>
+
+    <section id="about" style="display: none;">
+        <h2>Hakkında</h2>
+        <p>Web sitemiz hakkında daha fazla bilgiye buradan ulaşabilirsiniz.</p>
+    </section>
+
+    <footer>
+        &copy; 2023 Web Sitem. Tüm hakları saklıdır.
+    </footer>
+
+    <!-- Inline CSS -->
+    <style>
+        section p {
+            font-style: italic;
+        }
+    </style>
+
+
+ 
+    <script>
+        document.querySelector('nav a[href="#home"]').addEventListener('click', function() {
+            document.getElementById('home').style.display = 'block';
+            document.getElementById('about').style.display = 'none';
+        });
+
+        document.querySelector('nav a[href="#about"]').addEventListener('click', function() {
+            document.getElementById('home').style.display = 'none';
+            document.getElementById('about').style.display = 'block';
+        });
+    </script>
+
+</body>
+</html>
